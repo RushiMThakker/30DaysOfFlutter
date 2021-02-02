@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8ce839da-e24a-4a5b-9b38-d711763f433f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_29" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="6d7a54e8-dfab-4216-a31c-eec7254524a4" />
+  </component>
+  <component name="ProjectId" id="1nw3I6jpCnhC5koli3tS3odY9lM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ce839da-e24a-4a5b-9b38-d711763f433f" name="Default Changelist" comment="" />
+      <created>1612287242225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612287242225</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1797" height="263" key="GridCell.Tab.0.bottom" timestamp="1612297693700">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1797" height="263" key="GridCell.Tab.0.bottom/67.34.1853.1046@67.34.1853.1046" timestamp="1612297693700" />
+    <state width="1797" height="263" key="GridCell.Tab.0.center" timestamp="1612297693699">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1797" height="263" key="GridCell.Tab.0.center/67.34.1853.1046@67.34.1853.1046" timestamp="1612297693699" />
+    <state width="1797" height="263" key="GridCell.Tab.0.left" timestamp="1612297693698">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1797" height="263" key="GridCell.Tab.0.left/67.34.1853.1046@67.34.1853.1046" timestamp="1612297693698" />
+    <state width="1797" height="263" key="GridCell.Tab.0.right" timestamp="1612297693700">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1797" height="263" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1612297693700" />
+    <state x="359" y="103" key="SettingsEditor" timestamp="1612298934843">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="359" y="103" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1612298934843" />
+    <state x="167" y="132" width="1653" height="848" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1612287448525">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="167" y="132" width="1653" height="848" key="com.android.tools.idea.avdmanager.AvdListDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1612287448525" />
+    <state x="573" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1612297745625">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="573" y="345" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1612297745625" />
+    <state x="572" y="44" width="840" height="1034" key="search.everywhere.popup" timestamp="1612298781900">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="572" y="44" width="840" height="1034" key="search.everywhere.popup/67.34.1853.1046@67.34.1853.1046" timestamp="1612298781900" />
+  </component>
+</project>
