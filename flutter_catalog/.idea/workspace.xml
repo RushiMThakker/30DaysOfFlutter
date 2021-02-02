@@ -7,7 +7,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_29" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="997865f" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -25,7 +25,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -46,33 +46,35 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1797" height="263" key="GridCell.Tab.0.bottom" timestamp="1612303658300">
+    <state width="1797" height="263" key="GridCell.Tab.0.bottom" timestamp="1612304842535">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1797" height="263" key="GridCell.Tab.0.bottom/67.34.1853.1046@67.34.1853.1046" timestamp="1612303658300" />
-    <state width="1797" height="263" key="GridCell.Tab.0.center" timestamp="1612303658298">
+    <state width="1797" height="263" key="GridCell.Tab.0.bottom/67.34.1853.1046@67.34.1853.1046" timestamp="1612304842535" />
+    <state width="1797" height="263" key="GridCell.Tab.0.center" timestamp="1612304842534">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1797" height="263" key="GridCell.Tab.0.center/67.34.1853.1046@67.34.1853.1046" timestamp="1612303658298" />
-    <state width="1797" height="263" key="GridCell.Tab.0.left" timestamp="1612303658295">
+    <state width="1797" height="263" key="GridCell.Tab.0.center/67.34.1853.1046@67.34.1853.1046" timestamp="1612304842534" />
+    <state width="1797" height="263" key="GridCell.Tab.0.left" timestamp="1612304842534">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1797" height="263" key="GridCell.Tab.0.left/67.34.1853.1046@67.34.1853.1046" timestamp="1612303658295" />
-    <state width="1797" height="263" key="GridCell.Tab.0.right" timestamp="1612303658299">
+    <state width="1797" height="263" key="GridCell.Tab.0.left/67.34.1853.1046@67.34.1853.1046" timestamp="1612304842534" />
+    <state width="1797" height="263" key="GridCell.Tab.0.right" timestamp="1612304842535">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state width="1797" height="263" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1612303658299" />
-    <state x="359" y="103" key="SettingsEditor" timestamp="1612298934843">
+    <state width="1797" height="263" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1612304842535" />
+    <state x="359" y="103" key="SettingsEditor" timestamp="1612305236346">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="359" y="103" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1612298934843" />
+    <state x="359" y="103" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1612305236346" />
     <state x="167" y="132" width="1653" height="848" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1612287448525">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
