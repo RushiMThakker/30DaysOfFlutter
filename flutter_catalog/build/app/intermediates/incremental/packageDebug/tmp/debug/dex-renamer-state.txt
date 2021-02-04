@@ -1,4 +1,0 @@
-#Thu Feb 04 02:32:47 IST 2021
-base.0=/media/jeavio54/2drive/Rushi/Learnings/30DaysOfFlutter/flutter_catalog/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
