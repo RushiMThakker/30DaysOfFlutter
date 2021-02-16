@@ -1,20 +1,5 @@
 class CatalogModel {
-  static final items = [
-    Item(
-        id: 1,
-        name: "iPhone 12 Pro",
-        desc: "Apple iPhone 12th Generation",
-        price: 999,
-        color: "#33505a",
-        image: "https://images-na.ssl-images-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg"),
-    Item(
-        id: 2,
-        name: "Pixel 5",
-        desc: "Google's latest pixel phone",
-        price: 399,
-        color: "#33505a",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT13qniUv5qMrQlsyYSusV61oVTzC3fA-fyVQ&usqp=CAU"),
-  ];
+  static List<Item> items;
 }
 
 class Item {
@@ -26,4 +11,27 @@ class Item {
   final num price;
 
   Item({this.id, this.name, this.desc, this.color, this.image, this.price});
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return new Item(
+      id: map['id'] as int,
+      name: map['name'] as String,
+      desc: map['desc'] as String,
+      color: map['color'] as String,
+      image: map['image'] as String,
+      price: map['price'] as num,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    // ignore: unnecessary_cast
+    return {
+      'id': this.id,
+      'name': this.name,
+      'desc': this.desc,
+      'color': this.color,
+      'image': this.image,
+      'price': this.price,
+    } as Map<String, dynamic>;
+  }
 }
