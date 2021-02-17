@@ -4,22 +4,23 @@ class CatalogModel {
 
 class Item {
   final int id;
-  final String name;
+  final String title;
   final String desc;
-  final String color;
-  final String image;
-  final num price;
+  final String thumbnail;
+  final String creator;
+  final String uploadTime;
 
-  Item({this.id, this.name, this.desc, this.color, this.image, this.price});
+  Item({this.id, this.title, this.desc, this.thumbnail, this.creator,
+      this.uploadTime});
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return new Item(
       id: map['id'] as int,
-      name: map['name'] as String,
+      title: map['title'] as String,
       desc: map['desc'] as String,
-      color: map['color'] as String,
-      image: map['image'] as String,
-      price: map['price'] as num,
+      thumbnail: map['thumbnail'] as String,
+      creator: map['creator'] as String,
+      uploadTime: map['uploadTime'] as String,
     );
   }
 
@@ -27,11 +28,11 @@ class Item {
     // ignore: unnecessary_cast
     return {
       'id': this.id,
-      'name': this.name,
+      'title': this.title,
       'desc': this.desc,
-      'color': this.color,
-      'image': this.image,
-      'price': this.price,
+      'thumbnail': this.thumbnail,
+      'creator': this.creator,
+      'uploadTime': this.uploadTime,
     } as Map<String, dynamic>;
   }
 }

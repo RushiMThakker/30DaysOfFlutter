@@ -24,7 +24,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
@@ -32,7 +31,7 @@ class _HomePageState extends State<HomePage> {
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
-    setState(() { });
+    setState(() {});
   }
 
   @override
@@ -43,14 +42,42 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: (CatalogModel.items!=null && CatalogModel.items.length>0)?ListView.builder(
-          itemCount: CatalogModel.items.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ItemWidget(item: CatalogModel.items[index]);
-          },
-        ):Center(
-          child: CircularProgressIndicator(),
-        ),
+        child: (CatalogModel.items != null && CatalogModel.items.length > 0)
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    childAspectRatio: 2,
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16),
+                itemBuilder: (context, index) {
+                  final item = CatalogModel.items[index];
+                  return GridTile(
+                    child: Card(
+                        clipBehavior: Clip.antiAlias,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                        child: Image.network(item.thumbnail)),
+                    header: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(color: Colors.deepPurple),
+                        child: Text(
+                          item.title,
+                          style: TextStyle(color: Colors.white),
+                        )),
+                    footer: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(color: Colors.blueAccent),
+                        child: Text(
+                          item.creator,
+                          style: TextStyle(color: Colors.white),
+                        )),
+                  );
+                },
+                itemCount: CatalogModel.items.length,
+              )
+            : Center(
+                child: CircularProgressIndicator(),
+              ),
       ),
       drawer: MyDrawer(),
     );

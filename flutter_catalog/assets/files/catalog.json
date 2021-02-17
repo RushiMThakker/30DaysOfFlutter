@@ -2,67 +2,48 @@
   "products": [
     {
       "id": 1,
-      "name": "iPhone 12 Pro",
-      "desc": "Apple iPhone 12th generation",
-      "price": 999,
-      "color": "#33505a",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+      "title": "Gajar Ka Halwa",
+      "url": "https://www.youtube.com/watch?v=s2wzvaIor50",
+      "thumbnail": "https://i.ytimg.com/vi/s2wzvaIor50/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\\u0026rs=AOn4CLB9edr7rzl4_kY-GVNB11BH0TVDQQ",
+      "creator": "Flavors N Fitness",
+      "upload_time": "1 week ago",
+      "desc": "Gajar Ka Halwa or Carrot Halwa is a sweet dish and can be made in a different ways. It can be made with Khoya, Milkmaid or ..."
     },
     {
       "id": 2,
-      "name": "Pixel 5",
-      "desc": "Google Pixel phone 5th generation",
-      "price": 699,
-      "color": "#00ac51",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0JhwLvm_uLDLc-la7hK9WyVpe9naJFcebKfhcICiq2KtvXDePNAU_9QO06LPcQ0K0fLByc7m&usqp=CAc"
+      "title": "Gajar Halwa Pops",
+      "url": "https://www.youtube.com/watch?v=AC3ZsnoeoTw",
+      "thumbnail": "https://i.ytimg.com/vi/AC3ZsnoeoTw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\\u0026rs=AOn4CLC0S3lpDAydm0Et6Tw-HHwAx4hoKw",
+      "creator": "Flavors N Fitness",
+      "upload_time": "1 week ago",
+      "desc": "Valentine is around and we all wants to surprise our loved ones. So here I have created healthy , Tasty and amazing Sweet dish- ..."
     },
     {
       "id": 3,
-      "name": "M1 Macbook Air",
-      "desc": "Apple Macbook air with apple silicon",
-      "price": 1099,
-      "color": "#e0bfae",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+      "title": "Maggi Masala Fried Rice",
+      "url": "https://www.youtube.com/watch?v=MVrFNaKIlqs&amp;t=4s",
+      "thumbnail": "https://i.ytimg.com/vi/MVrFNaKIlqs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\\u0026rs=AOn4CLDOnMp2_5cOGa76G08AY0YbP3VBzQ",
+      "creator": "Flavors N Fitness",
+      "upload_time": "1 week ago",
+      "desc": "Hungry but don&apos;t want to cook for long hour and also wants something delicious for quick hunger. Maggi Masala Fried Rice is ..."
     },
     {
       "id": 4,
-      "name": "Playstation 5",
-      "desc": "Sony Playstation 5th generation",
-      "price": 500,
-      "color": "#544ee4",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+      "title": "Mumbai Street Style Pav Bhaji",
+      "url": "https://www.youtube.com/watch?v=-PiI1DTTUWE",
+      "thumbnail": "https://i.ytimg.com/vi/-PiI1DTTUWE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\\u0026rs=AOn4CLA0bosCTfIEstu7koeu6iCIELMe7Q",
+      "creator": "Flavors N Fitness",
+      "upload_time": "4 days ago",
+      "desc": "Street Style Pav Bhaji is pure love all time. Prepared this delicacy at home for Hubby and he loved it totally. Short recipe is ..."
     },
     {
       "id": 5,
-      "name": "Airpods Pro",
-      "desc": "Apple Aipods Pro 1st generation",
-      "price": 200,
-      "color": "#e3e4e9",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROEs084z65psoo06zYl5R0tUzywOVKVQZzmzqCj3PDP1vVJTWv3gGwGMFENSy4qV4n7sEQjE&usqp=CAc"
-    },
-    {
-      "id": 6,
-      "name": "iPad Pro",
-      "desc": "Apple iPad Pro 2020 edition",
-      "price": 799,
-      "color": "#f73984",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzUeRQ5uH7E3hpECib8qxdhfHv6SnUGT7mOsew_xiOoqRR7ZpdH-TQ4J6-HuIEfqHimYyPXWH&usqp=CAc"
-    },
-    {
-      "id": 7,
-      "name": "Galaxy S21 Ultra",
-      "desc": "Samsung Galaxy S21 Ultra 2021 edition",
-      "price": 1299,
-      "color": "#1c1c1c",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_PZcc0wicVYR992s5QCIDLYy8t-z-9kibTUdWZBN2sd86aaqdAJfhvxAwZNWV9wfdzDikpr1&usqp=CAc"
-    },
-    {
-      "id": 8,
-      "name": "Galaxy S21",
-      "desc": "Samsung Galaxy S21 2021 edition",
-      "price": 899,
-      "color": "#7c95eb",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNHd7FwarbxA1xdMFt24KazjcR4dWPH_t_T5dz4YNK1s7rJAQ8gOIuR_NRw6eeiQgFhbZ9sAN&usqp=CAc"
+      "title": "Soya Chunks Schezwan Pulao",
+      "url": "https://www.youtube.com/watch?v=JNC1EgeFsSM",
+      "thumbnail": "https://i.ytimg.com/vi/JNC1EgeFsSM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\\u0026rs=AOn4CLAV56zINPx_z7KErxTuQHm-7ktVEQ",
+      "creator": "Flavors N Fitness",
+      "upload_time": "3 weeks ago",
+      "desc": "Soya Chunks Schezwan Pulao is made up of goodness with Soya Chunks and Brown Rice. As promised it&apos;s quick, healthy and ..."
     }
   ]
 }
