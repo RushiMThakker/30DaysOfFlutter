@@ -20,7 +20,7 @@ class Item {
       desc: map['desc'] as String,
       thumbnail: map['thumbnail'] as String,
       creator: map['creator'] as String,
-      uploadTime: map['uploadTime'] as String,
+      uploadTime: map['upload_time'] as String,
     );
   }
 
@@ -32,7 +32,7 @@ class Item {
       'desc': this.desc,
       'thumbnail': this.thumbnail,
       'creator': this.creator,
-      'uploadTime': this.uploadTime,
+      'upload_time': this.uploadTime,
     } as Map<String, dynamic>;
   }
 }
