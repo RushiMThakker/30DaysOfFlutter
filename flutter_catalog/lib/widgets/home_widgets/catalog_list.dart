@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_catalog/models/catalog.dart';
+import 'package:flutter_catalog/pages/home_detail.dart';
+import 'package:flutter_catalog/utils/routes.dart';
+import 'package:flutter_catalog/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+import 'catalog_image.dart';
+
+class CatalogList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: CatalogModel.items.length,
+      itemBuilder: (context, index) {
+        final catalog = CatalogModel.items[index];
+        return InkWell(
+          child: Hero(tag: Key(catalog.id.toString()), child: CatalogItem(catalog: catalog)),
+          onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => HomeDetail(catalog: catalog))),
+        );
+      },
+    );
+  }
+}
+
+moveToDetail(BuildContext context) async {
+  await Future.delayed(Duration(seconds: 1));
+  await Navigator.pushNamed(context, MyRoutes.DETAIL_ROUTE);
+}
+
+class CatalogItem extends StatelessWidget {
+  final Item catalog;
+
+  const CatalogItem({Key key, @required this.catalog})
+      : assert(catalog != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return VxBox(
+        child: Row(
+      children: [
+        CatalogImage(
+          image: catalog.thumbnail,
+        ),
+        Expanded(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            catalog.title.text.bold.lg
+                .color(ThemeCollection.darkBluishColor)
+                .make(),
+            "${catalog.desc.substring(0, 40)}..."
+                .text
+                .textStyle(context.captionStyle)
+                .make(),
+            ButtonBar(
+              alignment: MainAxisAlignment.spaceBetween,
+              buttonPadding: Vx.mOnly(right: 16),
+              children: [
+                catalog.uploadTime.text.bold.sm.make(),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: "Save".text.make(),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          ThemeCollection.darkBluishColor),
+                      shape: MaterialStateProperty.all(StadiumBorder())),
+                )
+              ],
+            )
+          ],
+        ))
+      ],
+    )).white.roundedSM.square(150).make().py16();
+  }
+}

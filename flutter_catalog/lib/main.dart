@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home.dart';
+import 'package:flutter_catalog/pages/home_detail.dart';
 import 'package:flutter_catalog/pages/login.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
