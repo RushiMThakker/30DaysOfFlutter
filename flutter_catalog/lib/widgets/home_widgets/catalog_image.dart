@@ -14,10 +14,10 @@ class CatalogImage extends StatelessWidget {
         .box
         .roundedSM
         .p8
-        .color(ThemeCollection.creamColor)
-        .size(80, 80)
+        .color(context.canvasColor)
+        .size(50, 100)
         .make()
         .p16()
-        .w40(context);
+        .w32(context);
   }
 }

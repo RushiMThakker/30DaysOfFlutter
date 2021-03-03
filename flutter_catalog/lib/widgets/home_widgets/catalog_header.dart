@@ -12,7 +12,7 @@ class CatalogHeader extends StatelessWidget {
             .text
             .xl5
             .bold
-            .color(ThemeCollection.darkBluishColor)
+            .color(context.accentColor)
             .make(),
         "Trending Products".text.xl2.make()
       ],

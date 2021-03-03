@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:flutter/widgets.dart';
 import 'package:flutter_catalog/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -28,7 +29,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Column(children: [
           Image.asset(
@@ -40,7 +41,7 @@ class _LoginState extends State<Login> {
           ),
           Text("Welcome $name",
               style: TextStyle(
-                  color: Colors.purple,
+                  color: context.accentColor,
                   fontSize: 30,
                   fontWeight: FontWeight.bold)),
           SizedBox(
@@ -81,17 +82,17 @@ class _LoginState extends State<Login> {
             height: 40,
           ),
           Material(
-              color: Colors.deepPurple,
+              color: context.theme.buttonColor,
               borderRadius: BorderRadius.circular(changedButton ? 50 : 8),
               child: InkWell(
                 onTap: () => moveToHome(context),
                 child: AnimatedContainer(
                     duration: Duration(seconds: 1),
                     child: changedButton
-                        ? Icon(Icons.done, color: Colors.white)
+                        ? Icon(Icons.done, color: context.cardColor)
                         : Text("Login",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: context.accentColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 18)),
                     width: changedButton ? 50 : 150,

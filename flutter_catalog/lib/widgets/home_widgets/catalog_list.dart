@@ -16,7 +16,9 @@ class CatalogList extends StatelessWidget {
       itemBuilder: (context, index) {
         final catalog = CatalogModel.items[index];
         return InkWell(
-          child: Hero(tag: Key(catalog.id.toString()), child: CatalogItem(catalog: catalog)),
+          child: Hero(
+              tag: Key(catalog.id.toString()),
+              child: CatalogItem(catalog: catalog)),
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -48,12 +50,9 @@ class CatalogItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             catalog.title.text.bold.lg
-                .color(ThemeCollection.darkBluishColor)
+                .color(context.accentColor)
                 .make(),
-            catalog.desc
-                .text
-                .textStyle(context.captionStyle)
-                .make(),
+            catalog.desc.text.textStyle(context.captionStyle).make(),
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: Vx.mOnly(right: 16),
@@ -61,10 +60,10 @@ class CatalogItem extends StatelessWidget {
                 "\$${catalog.uploadTime}".text.bold.xl.make(),
                 ElevatedButton(
                   onPressed: () {},
-                  child: "Add to cart".text.lg.make(),
+                  child: "Add to cart".text.normal.make(),
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
-                          ThemeCollection.darkBluishColor),
+                          context.theme.buttonColor),
                       shape: MaterialStateProperty.all(StadiumBorder())),
                 )
               ],
@@ -72,6 +71,6 @@ class CatalogItem extends StatelessWidget {
           ],
         ))
       ],
-    )).white.roundedSM.square(150).make().py16();
+    )).color(context.cardColor).roundedSM.square(150).make().py16();
   }
 }

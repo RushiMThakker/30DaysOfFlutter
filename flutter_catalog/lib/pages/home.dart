@@ -10,7 +10,6 @@ import 'package:flutter_catalog/widgets/home_widgets/catalog_list.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -29,7 +28,7 @@ class _HomeState extends State<Home> {
 
   loadData() async {
     final catalogJson =
-    await rootBundle.loadString("assets/files/product_catalog.json");
+        await rootBundle.loadString("assets/files/product_catalog.json");
     final decodedData = jsonDecode(catalogJson);
     final productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
@@ -41,11 +40,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ThemeCollection.creamColor,
+      backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.CART_ROUTE),
-        backgroundColor: ThemeCollection.darkBluishColor,
-        child: Icon(CupertinoIcons.cart),
+        backgroundColor: context.theme.buttonColor,
+        child: Icon(
+          CupertinoIcons.cart,
+          color: Colors.white,
+        ),
       ),
       body: SafeArea(
         child: Container(
