@@ -8,7 +8,7 @@ class Item {
   final String desc;
   final String thumbnail;
   final String creator;
-  final String uploadTime;
+  final int uploadTime;
 
   Item({this.id, this.title, this.desc, this.thumbnail, this.creator,
       this.uploadTime});
@@ -20,7 +20,7 @@ class Item {
       desc: map['desc'] as String,
       thumbnail: map['thumbnail'] as String,
       creator: map['creator'] as String,
-      uploadTime: map['upload_time'] as String,
+      uploadTime: map['upload_time'] as int,
     );
   }
 

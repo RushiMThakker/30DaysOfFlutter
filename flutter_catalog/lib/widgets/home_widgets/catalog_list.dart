@@ -27,11 +27,6 @@ class CatalogList extends StatelessWidget {
   }
 }
 
-moveToDetail(BuildContext context) async {
-  await Future.delayed(Duration(seconds: 1));
-  await Navigator.pushNamed(context, MyRoutes.DETAIL_ROUTE);
-}
-
 class CatalogItem extends StatelessWidget {
   final Item catalog;
 
@@ -55,7 +50,7 @@ class CatalogItem extends StatelessWidget {
             catalog.title.text.bold.lg
                 .color(ThemeCollection.darkBluishColor)
                 .make(),
-            "${catalog.desc.substring(0, 40)}..."
+            catalog.desc
                 .text
                 .textStyle(context.captionStyle)
                 .make(),
@@ -63,10 +58,10 @@ class CatalogItem extends StatelessWidget {
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: Vx.mOnly(right: 16),
               children: [
-                catalog.uploadTime.text.bold.sm.make(),
+                "\$${catalog.uploadTime}".text.bold.xl.make(),
                 ElevatedButton(
                   onPressed: () {},
-                  child: "Save".text.make(),
+                  child: "Add to cart".text.lg.make(),
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           ThemeCollection.darkBluishColor),

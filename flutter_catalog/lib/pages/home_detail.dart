@@ -13,7 +13,9 @@ class HomeDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: ThemeCollection.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -21,15 +23,15 @@ class HomeDetail extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: Vx.mOnly(right: 16),
           children: [
-            catalog.uploadTime.text.bold.xl.make(),
+            "\$${catalog.uploadTime}".text.bold.xl2.make(),
             ElevatedButton(
               onPressed: () {},
-              child: "Save".text.xl.make(),
+              child: "Add to cart".text.lg.make(),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
                       ThemeCollection.darkBluishColor),
                   shape: MaterialStateProperty.all(StadiumBorder())),
-            ).wh(100, 50)
+            ).wh(130, 50)
           ],
         ).p32(),
       ),
@@ -50,14 +52,17 @@ class HomeDetail extends StatelessWidget {
               color: Colors.white,
               child: Column(
                 children: [
-                  catalog.title.text.bold.xl4
+                  catalog.title.text.bold.xl2
                       .color(ThemeCollection.darkBluishColor)
                       .make()
                       .p8(),
-                  catalog.desc.text.lg.textStyle(context.captionStyle).make(),
+                  catalog.desc.text.lg
+                      .textStyle(context.captionStyle)
+                      .make()
+                      .p16(),
                 ],
-              ).p16(),
-            ).py24(),
+              ).py32(),
+            ),
           ))
         ]),
       ),

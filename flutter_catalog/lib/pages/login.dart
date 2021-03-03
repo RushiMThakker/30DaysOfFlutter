@@ -2,12 +2,12 @@ import "package:flutter/material.dart";
 import 'package:flutter/widgets.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 
-class LoginPage extends StatefulWidget {
+class Login extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _LoginState createState() => _LoginState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginState extends State<Login> {
   String name = "";
   bool changedButton = false;
   final _formKey = GlobalKey<FormState>();

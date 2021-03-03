@@ -20,11 +20,6 @@ class ItemWidget extends StatelessWidget {
       title: Text(item.title),
       subtitle: Text(
         '${item.desc.substring(0, 30)}...',
-      ),
-      trailing: Text(item.creator,
-          textScaleFactor: 1.2,
-          style:
-              TextStyle(color: Colors.lightBlueAccent, fontWeight: FontWeight.bold)),
-    ));
+      )));
   }
 }

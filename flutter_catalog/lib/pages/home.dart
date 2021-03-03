@@ -1,19 +1,22 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_catalog/models/catalog.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_list.dart';
+import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 
-class HomePage extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomeState createState() => _HomeState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeState extends State<Home> {
   final int days = 50;
 
   final String name = "Rushi";
@@ -26,7 +29,7 @@ class _HomePageState extends State<HomePage> {
 
   loadData() async {
     final catalogJson =
-    await rootBundle.loadString("assets/files/catalog.json");
+    await rootBundle.loadString("assets/files/product_catalog.json");
     final decodedData = jsonDecode(catalogJson);
     final productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
@@ -38,6 +41,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ThemeCollection.creamColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.CART_ROUTE),
+        backgroundColor: ThemeCollection.darkBluishColor,
+        child: Icon(CupertinoIcons.cart),
+      ),
       body: SafeArea(
         child: Container(
           padding: Vx.m32,

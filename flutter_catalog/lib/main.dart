@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home.dart';
-import 'package:flutter_catalog/pages/home_detail.dart';
+import 'package:flutter_catalog/pages/cart.dart';
 import 'package:flutter_catalog/pages/login.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
@@ -19,9 +19,10 @@ class MyApp extends StatelessWidget {
       initialRoute: MyRoutes.HOME_ROUTE,
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => LoginPage(),
-        MyRoutes.HOME_ROUTE: (context) => HomePage(),
-        MyRoutes.LOGIN_ROUTE: (context) => LoginPage()
+        "/": (context) => Login(),
+        MyRoutes.HOME_ROUTE: (context) => Home(),
+        MyRoutes.LOGIN_ROUTE: (context) => Login(),
+        MyRoutes.CART_ROUTE: (context) => Cart(),
       },
     );
   }
