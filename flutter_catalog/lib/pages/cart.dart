@@ -6,15 +6,14 @@ class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ThemeCollection.creamColor,
+      backgroundColor: context.canvasColor,
       appBar: AppBar(
         title: "Cart".text.make(),
-        backgroundColor: Colors.transparent,
       ),
       body: SafeArea(
         child: Container(
           child: "Hi cart".text.make(),
-          color: Colors.white,
+          color: context.canvasColor,
         ),
       ),
     );
