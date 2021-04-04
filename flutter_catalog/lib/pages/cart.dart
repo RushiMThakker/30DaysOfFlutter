@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Cart extends StatelessWidget {
@@ -32,7 +31,11 @@ class _CartTotal extends StatelessWidget {
           "\$9999".text.xl4.color(context.accentColor).make(),
           30.widthBox,
           ElevatedButton(
-            onPressed: null,
+            onPressed: (){
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: "Buying not supported yet".text.make(),
+              ));
+            },
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
                     context.theme.buttonColor)),
@@ -66,4 +69,3 @@ class __CartListState extends State<_CartList> {
     );
   }
 }
-

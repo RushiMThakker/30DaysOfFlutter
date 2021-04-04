@@ -14,7 +14,7 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.getByPosition(index);
+        final catalog = CatalogModel.items[index];
         return InkWell(
           child: Hero(
               tag: Key(catalog.id.toString()),
@@ -40,37 +40,35 @@ class CatalogItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return VxBox(
         child: Row(
-      children: [
-        CatalogImage(
-          image: catalog.thumbnail,
-        ),
-        Expanded(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            catalog.title.text.bold.lg
-                .color(context.accentColor)
-                .make(),
-            catalog.desc.text.textStyle(context.captionStyle).make(),
-            ButtonBar(
-              alignment: MainAxisAlignment.spaceBetween,
-              buttonPadding: Vx.mOnly(right: 16),
-              children: [
-                "\$${catalog.uploadTime}".text.bold.xl.make(),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: "Add to cart".text.normal.make(),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          context.theme.buttonColor),
-                      shape: MaterialStateProperty.all(StadiumBorder())),
-                )
-              ],
-            )
-          ],
-        ))
-      ],
+        children: [
+          CatalogImage(
+            image: catalog.thumbnail,
+          ),
+          Expanded(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              catalog.title.text.bold.lg.color(context.accentColor).make(),
+              catalog.desc.text.textStyle(context.captionStyle).make(),
+              ButtonBar(
+                alignment: MainAxisAlignment.spaceBetween,
+                buttonPadding: Vx.mOnly(right: 16),
+                children: [
+                  "\$${catalog.uploadTime}".text.bold.xl.make(),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: "Add to cart".text.normal.make(),
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            context.theme.buttonColor),
+                        shape: MaterialStateProperty.all(StadiumBorder())),
+                  )
+                ],
+              )
+            ],
+          ))
+        ],
     )).color(context.cardColor).roundedSM.square(150).make().py16();
   }
 }
