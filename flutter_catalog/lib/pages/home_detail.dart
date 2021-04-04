@@ -60,6 +60,7 @@ class HomeDetail extends StatelessWidget {
                       .textStyle(context.captionStyle)
                       .make()
                       .p16(),
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere eleifend hendrerit. Nam vel justo tellus. Quisque ut aliquet purus. Aliquam at purus vitae arcu mollis pretium. Nullam congue turpis at mauris blandit hendrerit id a lacus. Aliquam vel ex enim. Phasellus vulputate quis felis vel pretium. Pellentesque sit amet.".text.make()
                 ],
               ).py32(),
             ),
