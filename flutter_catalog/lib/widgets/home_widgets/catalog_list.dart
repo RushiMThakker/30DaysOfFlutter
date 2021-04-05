@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/models/cart.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_detail.dart';
+import 'package:flutter_catalog/utils/routes.dart';
+import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'add_to_cart.dart';
@@ -41,20 +44,20 @@ class CatalogItem extends StatelessWidget {
         child: Row(
       children: [
         CatalogImage(
-          image: catalog.thumbnail,
+          image: catalog.image,
         ),
         Expanded(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            catalog.title.text.bold.lg.color(context.accentColor).make(),
+            catalog.name.text.bold.lg.color(context.accentColor).make(),
             catalog.desc.text.textStyle(context.captionStyle).make(),
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: Vx.mOnly(right: 16),
               children: [
-                "\$${catalog.uploadTime}".text.bold.xl.make(),
+                "\$${catalog.price}".text.bold.xl.make(),
                 AddToCart(catalog: catalog)
               ],
             )

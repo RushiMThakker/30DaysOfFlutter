@@ -14,10 +14,10 @@ class ItemWidget extends StatelessWidget {
     return Card(
         child: ListTile(
       onTap: () {
-        print("${item.title} pressed");
+        print("${item.name} pressed");
       },
-      leading: Image.network(item.thumbnail),
-      title: Text(item.title),
+      leading: Image.network(item.image),
+      title: Text(item.name),
       subtitle: Text(
         '${item.desc.substring(0, 30)}...',
       )));

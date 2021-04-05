@@ -1,48 +1,104 @@
-class CatalogModel {
+import 'dart:convert';
 
+class CatalogModel {
   static List<Item> items;
 
-  //Get item by Id
-  Item getById(int id) {
-    return items.firstWhere((e) => e.id == id, orElse: null);
-  }
+  // Get Item by ID
+  Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
 
-  Item getByPosition(int position) {
-    return items[position];
-  }
+  // Get Item by position
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
   final int id;
-  final String title;
+  final String name;
   final String desc;
-  final String thumbnail;
-  final String creator;
-  final int uploadTime;
+  final num price;
+  final String color;
+  final String image;
 
-  Item({this.id, this.title, this.desc, this.thumbnail, this.creator,
-      this.uploadTime});
+  Item({
+    this.id,
+    this.name,
+    this.desc,
+    this.price,
+    this.color,
+    this.image,
+  });
 
-  factory Item.fromMap(Map<String, dynamic> map) {
-    return new Item(
-      id: map['id'] as int,
-      title: map['title'] as String,
-      desc: map['desc'] as String,
-      thumbnail: map['thumbnail'] as String,
-      creator: map['creator'] as String,
-      uploadTime: map['upload_time'] as int,
+  Item copyWith({
+    int id,
+    String name,
+    String desc,
+    num price,
+    String color,
+    String image,
+  }) {
+    return Item(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      desc: desc ?? this.desc,
+      price: price ?? this.price,
+      color: color ?? this.color,
+      image: image ?? this.image,
     );
   }
 
   Map<String, dynamic> toMap() {
-    // ignore: unnecessary_cast
     return {
-      'id': this.id,
-      'title': this.title,
-      'desc': this.desc,
-      'thumbnail': this.thumbnail,
-      'creator': this.creator,
-      'upload_time': this.uploadTime,
-    } as Map<String, dynamic>;
+      'id': id,
+      'name': name,
+      'desc': desc,
+      'price': price,
+      'color': color,
+      'image': image,
+    };
+  }
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    if (map == null) return null;
+
+    return Item(
+      id: map['id'],
+      name: map['name'],
+      desc: map['desc'],
+      price: map['price'],
+      color: map['color'],
+      image: map['image'],
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Item.fromJson(String source) => Item.fromMap(json.decode(source));
+
+  @override
+  String toString() {
+    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, image: $image)';
+  }
+
+  @override
+  bool operator ==(Object o) {
+    if (identical(this, o)) return true;
+
+    return o is Item &&
+        o.id == id &&
+        o.name == name &&
+        o.desc == desc &&
+        o.price == price &&
+        o.color == color &&
+        o.image == image;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+    name.hashCode ^
+    desc.hashCode ^
+    price.hashCode ^
+    color.hashCode ^
+    image.hashCode;
   }
 }

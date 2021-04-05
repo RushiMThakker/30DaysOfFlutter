@@ -58,7 +58,7 @@ class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final CartModel _cart = (VxState.store as MyStore).cart;
-    VxState.listen(context, to: [RemoveMutation]);
+    VxState.watch(context, on: [RemoveMutation]);
     return _cart.items.isEmpty
         ? "Nothing to show".text.xl3.makeCentered()
         : ListView.builder(
@@ -67,7 +67,7 @@ class _CartList extends StatelessWidget {
               final Item item = _cart.items[index];
               return ListTile(
                 leading: Icon(Icons.done),
-                title: item.title.text.color(context.accentColor).make(),
+                title: item.name.text.color(context.accentColor).make(),
                 trailing: IconButton(
                     onPressed: () {
                       RemoveMutation(item);

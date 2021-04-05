@@ -23,7 +23,7 @@ class HomeDetail extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: Vx.mOnly(right: 16),
           children: [
-            "\$${catalog.uploadTime}".text.bold.xl2.make(),
+            "\$${catalog.price}".text.bold.xl2.make(),
               AddToCart(catalog: catalog).wh(130, 50)
           ],
         ).p32(),
@@ -33,7 +33,7 @@ class HomeDetail extends StatelessWidget {
         child: Column(children: [
           Hero(
                   tag: Key(catalog.id.toString()),
-                  child: Image.network(catalog.thumbnail))
+                  child: Image.network(catalog.image))
               .h32(context),
           Expanded(
               child: VxArc(
@@ -45,7 +45,7 @@ class HomeDetail extends StatelessWidget {
               color: context.cardColor,
               child: Column(
                 children: [
-                  catalog.title.text.bold.xl2
+                  catalog.name.text.bold.xl2
                       .color(context.accentColor)
                       .make()
                       .p8(),
